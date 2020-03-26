@@ -100,16 +100,13 @@
             Pulse Buttons
           </h1>
           <div style="text-align: center;">
-            <a class="btn-floating btn-small pulse">
-              <i class="material-icons">access_alarm</i>
-            </a>
-            <a class="btn-floating btn-small pulse">
+            <a class="btn-floating btn-small cyan pulse" title="Boton SMALL">
               <i class="material-icons">menu</i>
             </a>
-            <a class="btn-floating btn-medium pulse"
+            <a class="btn-floating btn-medium cyan pulse" title="Boton MEDIUM"
               ><i class="material-icons">cloud</i></a
             >
-            <a class="btn-floating btn-large cyan pulse"
+            <a class="btn-floating btn-large cyan pulse" title="Boton LARGE"
               ><i class="material-icons">edit</i></a
             >
           </div>
@@ -117,7 +114,10 @@
         </div>
       </div>
       <div class="parallax">
-        <img src="background1.jpg" alt="Unsplashed background img 1" />
+        <img
+          src="https://materializecss.com/templates/parallax-template/background1.jpg"
+          alt="Unsplashed background img 1"
+        />
       </div>
     </div>
 
@@ -188,7 +188,10 @@
         </div>
       </div>
       <div class="parallax">
-        <img src="background2.jpg" alt="Unsplashed background img 2" />
+        <img
+          src="https://materializecss.com/templates/parallax-template/background2.jpg"
+          alt="Unsplashed background img 2"
+        />
       </div>
     </div>
 
@@ -225,7 +228,10 @@
         </div>
       </div>
       <div class="parallax">
-        <img src="background3.jpg" alt="Unsplashed background img 3" />
+        <img
+          src="https://materializecss.com/templates/parallax-template/background3.jpg"
+          alt="Unsplashed background img 3"
+        />
       </div>
     </div>
 
@@ -270,8 +276,12 @@
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
     <script>
-      $(document).ready(function() {
-        $(".fixed-action-btn").floatingActionButton();
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".fixed-action-btn");
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: "left",
+          hoverEnabled: false
+        });
       });
     </script>
   </body>
